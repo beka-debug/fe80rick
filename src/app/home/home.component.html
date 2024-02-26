@@ -1,0 +1,9 @@
+<h1>Characters</h1>
+<input type="text" [(ngModel)]="characterName" (input)="filterCharacters()">
+<button [disabled]="info.prev == null" (click)="prevPage()">previous</button>
+<span>{{currentPage}}</span>
+<button [disabled]="info.next == null" (click)="nextPage()">next</button>
+
+<div class="main">
+<app-card *ngFor="let i of arr" [cardInfo]="i"></app-card>
+</div>
